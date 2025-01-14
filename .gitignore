@@ -1,3 +1,9 @@
+.vs
 Presentation/API/obj
 Presentation/API/bin
-.vs
+Application/Application/obj
+Application/Application/bin
+Domain/Domain/obj
+Domain/Domain/bin
+Infrastructure/Persistence/obj
+Infrastructure/Persistence/bin
