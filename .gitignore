@@ -7,3 +7,4 @@ Domain/Domain/obj
 Domain/Domain/bin
 Infrastructure/Persistence/obj
 Infrastructure/Persistence/bin
+Presentation/API/appsettings.Development.json
