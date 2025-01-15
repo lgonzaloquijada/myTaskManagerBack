@@ -14,6 +14,11 @@ public class UserService : IUserService
         //_tokenService = tokenService;
     }
 
+    public async Task<IEnumerable<User>> GetAll()
+    {
+        return await _userRepository.GetAll();
+    }
+
     public async Task<User?> GetById(int id)
     {
         return await _userRepository.GetById(id);
