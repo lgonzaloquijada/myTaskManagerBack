@@ -35,7 +35,7 @@ public static class Program
             options => options
                 .AllowAnyMethod()
                 .AllowAnyHeader()
-                .WithOrigins(builder.Configuration["ClientDomain"] ?? "")
+                .WithOrigins(builder.Configuration["AllowedHosts"] ?? "")
         );
 
         app.UseHttpsRedirection();
