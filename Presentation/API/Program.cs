@@ -31,6 +31,13 @@ public static class Program
             app.UseSwaggerUI();
         }
 
+        app.UseCors(
+            options => options
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .WithOrigins(builder.Configuration["ClientDomain"] ?? "")
+        );
+
         app.UseHttpsRedirection();
         app.MapControllers();
 
