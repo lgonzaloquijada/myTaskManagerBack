@@ -4,5 +4,9 @@
       "Default": "Information",
       "Microsoft.AspNetCore": "Warning"
     }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "MainConnection": "Data Source=xxx;Initial Catalog=xxx;user id=xxx;password=xxx;TrustServerCertificate=True"
   }
 }
