@@ -20,18 +20,7 @@ public class UserController : ControllerBase
     public async Task<IActionResult> GetAll()
     {
         var users = await _userService.GetAll();
-        var usersDTO = users.Select(user => new UserDTO()
-        {
-            id = user.Id,
-            name = user.Name,
-            email = user.Email,
-            password = user.Password,
-            role = user.Role,
-            created_at = user.CreatedAt,
-            updated_at = user.UpdatedAt,
-            token = user.Token,
-            is_active = user.IsActive
-        });
+        var usersDTO = users.Select(user => UserDTO.ToUserDTO(user));
         return Ok(usersDTO);
     }
 
@@ -43,7 +32,9 @@ public class UserController : ControllerBase
         {
             return NotFound();
         }
-        return Ok(user);
+
+        var userDTO = UserDTO.ToUserDTO(user);
+        return Ok(userDTO);
     }
 
     [HttpGet("email/{email}")]
@@ -54,7 +45,8 @@ public class UserController : ControllerBase
         {
             return NotFound();
         }
-        return Ok(user);
+        var userDTO = UserDTO.ToUserDTO(user);
+        return Ok(userDTO);
     }
 
     [HttpPost]
@@ -62,20 +54,24 @@ public class UserController : ControllerBase
     {
         var userModel = userDTO.ToUserModel();
         var createdUser = await _userService.Create(userModel);
-        return CreatedAtAction(nameof(GetById), new { id = createdUser.Id }, createdUser);
+        var createUserDTO = UserDTO.ToUserDTO(createdUser);
+        return CreatedAtAction(nameof(GetById), new { id = createdUser.Id }, createUserDTO);
     }
 
     [HttpPut]
-    public async Task<IActionResult> Update(User user)
+    public async Task<IActionResult> Update(UserDTO userDTO)
     {
+        var user = userDTO.ToUserModel();
         var updatedUser = await _userService.Update(user);
-        return Ok(updatedUser);
+        var updatedUserDTO = UserDTO.ToUserDTO(updatedUser);
+        return Ok(updatedUserDTO);
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
         var deletedUser = await _userService.Delete(id);
-        return Ok(deletedUser);
+        var deletedUserDTO = UserDTO.ToUserDTO(deletedUser);
+        return Ok(deletedUserDTO);
     }
 }
