@@ -55,4 +55,20 @@ public class UserDTO
             IsActive = this.is_active
         };
     }
+
+    public static UserDTO ToUserDTO(User user)
+    {
+        return new UserDTO()
+        {
+            id = user.Id,
+            name = user.Name,
+            email = user.Email,
+            password = user.Password,
+            role = user.Role,
+            created_at = user.CreatedAt,
+            updated_at = user.UpdatedAt,
+            token = user.Token,
+            is_active = user.IsActive
+        };
+    }
 }
