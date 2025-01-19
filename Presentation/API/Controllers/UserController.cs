@@ -1,3 +1,4 @@
+using API.DTOs;
 using Application.Services;
 using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -19,7 +20,19 @@ public class UserController : ControllerBase
     public async Task<IActionResult> GetAll()
     {
         var users = await _userService.GetAll();
-        return Ok(users);
+        var usersDTO = users.Select(user => new UserDTO()
+        {
+            id = user.Id,
+            name = user.Name,
+            email = user.Email,
+            password = user.Password,
+            role = user.Role,
+            created_at = user.CreatedAt,
+            updated_at = user.UpdatedAt,
+            token = user.Token,
+            is_active = user.IsActive
+        });
+        return Ok(usersDTO);
     }
 
     [HttpGet("{id}")]
@@ -45,9 +58,10 @@ public class UserController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create(User user)
+    public async Task<IActionResult> Create(UserDTO userDTO)
     {
-        var createdUser = await _userService.Create(user);
+        var userModel = userDTO.ToUserModel();
+        var createdUser = await _userService.Create(userModel);
         return CreatedAtAction(nameof(GetById), new { id = createdUser.Id }, createdUser);
     }
 
@@ -56,5 +70,12 @@ public class UserController : ControllerBase
     {
         var updatedUser = await _userService.Update(user);
         return Ok(updatedUser);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var deletedUser = await _userService.Delete(id);
+        return Ok(deletedUser);
     }
 }
