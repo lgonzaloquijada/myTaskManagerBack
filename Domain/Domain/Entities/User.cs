@@ -9,6 +9,15 @@ public class User : Entity
     public string Role { get; set; }
     public string Token { get; set; }
 
+    public User()
+    {
+        Name = string.Empty;
+        Email = string.Empty;
+        Password = string.Empty;
+        Role = string.Empty;
+        Token = string.Empty;
+    }
+
     public User(string name, string email, string password, string role, string token)
     {
         Name = name;

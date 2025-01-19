@@ -42,5 +42,12 @@ namespace Persistence.Repositories
             await _context.SaveChangesAsync();
             return user;
         }
+
+        public async Task<User> Delete(User user)
+        {
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+            return user;
+        }
     }
 }
