@@ -36,7 +36,8 @@ public static class Program
                     ValidateIssuerSigningKey = true,
                     ValidIssuer = jwSettings["TokenIssuer"] ?? "",
                     ValidAudience = jwSettings["TokenAudience"] ?? "",
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwSettings["TokenKey"] ?? ""))
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwSettings["TokenKey"] ?? "")),
+                    ClockSkew = TimeSpan.FromMinutes(jwSettings["TokenExpirationMinutes"] != null ? Convert.ToInt32(jwSettings["TokenExpirationMinutes"]) : 5)
                 };
             });
 

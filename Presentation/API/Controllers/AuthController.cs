@@ -52,12 +52,13 @@ public class AuthController : ControllerBase
         var jwSettings = _configuration.GetSection("JwtSettings");
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwSettings["TokenKey"] ?? ""));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+        var expirationMinutes = jwSettings["TokenExpirationMinutes"] != null ? Convert.ToInt32(jwSettings["TokenExpirationMinutes"]) : 30;
 
         var token = new JwtSecurityToken(
             jwSettings["TokenIssuer"],
             jwSettings["TokenAudience"],
             claims,
-            expires: DateTime.Now.AddDays(1),
+            expires: DateTime.Now.AddMinutes(expirationMinutes),
             signingCredentials: creds
         );
 
