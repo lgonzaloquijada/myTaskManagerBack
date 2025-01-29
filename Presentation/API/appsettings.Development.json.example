@@ -8,5 +8,10 @@
   "AllowedHosts": "*",
   "ConnectionStrings": {
     "MainConnection": "Data Source=xxx;Initial Catalog=xxx;user id=xxx;password=xxx;TrustServerCertificate=True"
+  },
+  "JwtSettings": {
+    "TokenKey": "xxx",
+    "TokenIssuer": "xxx",
+    "TokenAudience": "xxx"
   }
 }

@@ -1,5 +1,7 @@
+using System.Text;
 using Application;
 using Domain;
+using Microsoft.IdentityModel.Tokens;
 using Persistence;
 
 namespace API;
@@ -21,6 +23,24 @@ public static class Program
         builder.Services.AddApplicationServices();
         builder.Services.AddDomainServices();
         builder.Services.AddPersistenceServices();
+
+        builder.Services.AddAuthentication("Bearer")
+            .AddJwtBearer("Bearer", options =>
+            {
+                var jwSettings = builder.Configuration.GetSection("JwtSettings");
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = jwSettings["TokenIssuer"] ?? "",
+                    ValidAudience = jwSettings["TokenAudience"] ?? "",
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwSettings["TokenKey"] ?? ""))
+                };
+            });
+
+        builder.Services.AddAuthorization();
 
         var app = builder.Build();
 
