@@ -1,6 +1,6 @@
 using Domain.Entities;
 
-namespace API.DTOs;
+namespace API.DTOs.UserDTOs;
 
 public class UserDTO
 {

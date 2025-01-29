@@ -1,8 +1,8 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using API.DTOs;
-using API.DTOs.Auth;
+using API.DTOs.AuthDTOs;
+using API.DTOs.UserDTOs;
 using Application.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
