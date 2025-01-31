@@ -12,6 +12,8 @@
   "JwtSettings": {
     "TokenKey": "xxx",
     "TokenIssuer": "xxx",
-    "TokenAudience": "xxx"
+    "TokenAudience": "xxx",
+    "TokenExpirationMinutes": 120,
+    "ExpireToleranceMinutes": 5
   }
 }
