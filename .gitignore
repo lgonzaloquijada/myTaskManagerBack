@@ -8,3 +8,5 @@ src/Domain/Domain/bin
 src/Infrastructure/Persistence/obj
 src/Infrastructure/Persistence/bin
 src/Presentation/API/appsettings.Development.json
+tests/Application.Tests/bin
+tests/Application.Tests/obj
