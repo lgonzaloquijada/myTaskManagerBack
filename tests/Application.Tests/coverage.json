@@ -1,18 +1,5 @@
 {
   "Application.dll": {
-    "E:\\Proyectos\\myprojects\\myTaskManagerBack\\src\\Application\\Application\\ApplicationRegistrationExtensions.cs": {
-      "Application.ApplicationRegistrationExtensions": {
-        "System.Void Application.ApplicationRegistrationExtensions::AddApplicationServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
-          "Lines": {
-            "9": 0,
-            "10": 0,
-            "11": 0,
-            "12": 0
-          },
-          "Branches": []
-        }
-      }
-    },
     "E:\\Proyectos\\myprojects\\myTaskManagerBack\\src\\Application\\Application\\Services\\AuthService.cs": {
       "Application.Services.AuthService": {
         "System.Void Application.Services.AuthService::.ctor(Domain.Repositories.IUserRepository)": {
@@ -81,10 +68,10 @@
       "Application.Services.UserService": {
         "System.Void Application.Services.UserService::.ctor(Domain.Repositories.IUserRepository)": {
           "Lines": {
-            "11": 5,
-            "12": 5,
-            "13": 5,
-            "15": 5
+            "11": 10,
+            "12": 10,
+            "13": 10,
+            "15": 10
           },
           "Branches": []
         }
@@ -92,16 +79,16 @@
       "Application.Services.UserService/<Create>d__5": {
         "System.Void Application.Services.UserService/<Create>d__5::MoveNext()": {
           "Lines": {
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "40": 0,
-            "41": 0,
-            "42": 0,
-            "44": 0,
-            "45": 0
+            "33": 2,
+            "34": 2,
+            "35": 2,
+            "36": 1,
+            "37": 1,
+            "40": 1,
+            "41": 1,
+            "42": 1,
+            "44": 1,
+            "45": 1
           },
           "Branches": [
             {
@@ -110,7 +97,7 @@
               "EndOffset": 182,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 35,
@@ -118,7 +105,7 @@
               "EndOffset": 194,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -126,13 +113,13 @@
       "Application.Services.UserService/<Delete>d__7": {
         "System.Void Application.Services.UserService/<Delete>d__7::MoveNext()": {
           "Lines": {
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "60": 0,
-            "61": 0
+            "53": 2,
+            "54": 2,
+            "55": 2,
+            "56": 1,
+            "57": 1,
+            "60": 1,
+            "61": 1
           },
           "Branches": [
             {
@@ -141,7 +128,7 @@
               "EndOffset": 177,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 55,
@@ -149,7 +136,7 @@
               "EndOffset": 189,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -187,9 +174,9 @@
       "Application.Services.UserService/<Update>d__6": {
         "System.Void Application.Services.UserService/<Update>d__6::MoveNext()": {
           "Lines": {
-            "48": 0,
-            "49": 0,
-            "50": 0
+            "48": 1,
+            "49": 1,
+            "50": 1
           },
           "Branches": []
         }

@@ -92,4 +92,79 @@ public class UserServiceTest
         // Assert
         Assert.Null(result);
     }
+
+    [Fact]
+    public async Task Create_WhenEmailIsInUse_ThrowsException()
+    {
+        // Arrange
+        var user = new User { Email = "test1@mail.com" };
+        _userRepositoryMock.Setup(x => x.GetByEmail("test1@mail.com"))
+            .ReturnsAsync(user);
+
+        // Act
+        Func<Task> act = async () => await _userService.Create(user);
+
+        // Assert
+        await Assert.ThrowsAsync<Exception>(act);
+    }
+
+    [Fact]
+    public async Task Create_WhenEmailIsNotInUse_CreatesUser()
+    {
+        // Arrange
+        var user = new User { Email = "test1@mail.com" };
+        _userRepositoryMock.Setup(x => x.GetByEmail("test1@mail.com"))
+            .ReturnsAsync((User?)null);
+
+        // Act
+        var result = await _userService.Create(user);
+
+        // Assert
+        _userRepositoryMock.Verify(x => x.Create(user), Times.Once);
+        Assert.Equal("user", user.Role);
+        Assert.NotEmpty(user.Password);
+        Assert.Empty(user.Token);
+    }
+
+    [Fact]
+    public async Task Update_UpdatesUser()
+    {
+        // Arrange
+        var user = new User { Id = 1, Email = "test1@mail.com" };
+
+        // Act
+        var result = await _userService.Update(user);
+
+        // Assert
+        _userRepositoryMock.Verify(x => x.Update(user), Times.Once);
+    }
+
+    [Fact]
+    public async Task Delete_WhenUserExists_DeletesUser()
+    {
+        // Arrange
+        var user = new User { Id = 1, Email = "test1@mail.com" };
+        _userRepositoryMock.Setup(x => x.GetById(1))
+            .ReturnsAsync(user);
+
+        // Act
+        var result = await _userService.Delete(1);
+
+        // Assert
+        _userRepositoryMock.Verify(x => x.Delete(user), Times.Once);
+    }
+
+    [Fact]
+    public async Task Delete_WhenUserDoesNotExist_ThrowsException()
+    {
+        // Arrange
+        _userRepositoryMock.Setup(x => x.GetById(1))
+            .ReturnsAsync((User?)null);
+
+        // Act
+        Func<Task> act = async () => await _userService.Delete(1);
+
+        // Assert
+        await Assert.ThrowsAsync<Exception>(act);
+    }
 }
