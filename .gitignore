@@ -10,3 +10,5 @@ src/Infrastructure/Persistence/bin
 src/Presentation/API/appsettings.Development.json
 tests/Application.Tests/bin
 tests/Application.Tests/obj
+tests/Domain.Tests/bin
+tests/Domain.Tests/obj

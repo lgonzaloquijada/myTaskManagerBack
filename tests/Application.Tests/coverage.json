@@ -183,5 +183,106 @@
       }
     }
   },
-  "Domain.dll": {}
+  "Domain.dll": {
+    "E:\\Proyectos\\myprojects\\myTaskManagerBack\\src\\Domain\\Domain\\Models\\Entity.cs": {
+      "Domain.Models.Entity": {
+        "System.Int32 Domain.Models.Entity::get_Id()": {
+          "Lines": {
+            "4": 6
+          },
+          "Branches": []
+        },
+        "System.DateTime Domain.Models.Entity::get_CreatedAt()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Domain.Models.Entity::get_UpdatedAt()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Models.Entity::get_CreatedBy()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Models.Entity::get_UpdatedBy()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Domain.Models.Entity::get_IsActive()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "E:\\Proyectos\\myprojects\\myTaskManagerBack\\src\\Domain\\Domain\\Entities\\User.cs": {
+      "Domain.Entities.User": {
+        "System.String Domain.Entities.User::get_Name()": {
+          "Lines": {
+            "6": 10
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.User::get_Email()": {
+          "Lines": {
+            "7": 22
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.User::get_Password()": {
+          "Lines": {
+            "8": 19
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.User::get_Role()": {
+          "Lines": {
+            "9": 12
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.User::get_Token()": {
+          "Lines": {
+            "10": 12
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.User::.ctor()": {
+          "Lines": {
+            "12": 10,
+            "13": 10,
+            "14": 10,
+            "15": 10,
+            "16": 10,
+            "17": 10,
+            "18": 10,
+            "19": 10
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.User::.ctor(System.String,System.String,System.String,System.String,System.String)": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
 }
