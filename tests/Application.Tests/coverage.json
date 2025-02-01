@@ -1,4 +1,200 @@
 {
-  "Application.dll": {},
+  "Application.dll": {
+    "E:\\Proyectos\\myprojects\\myTaskManagerBack\\src\\Application\\Application\\ApplicationRegistrationExtensions.cs": {
+      "Application.ApplicationRegistrationExtensions": {
+        "System.Void Application.ApplicationRegistrationExtensions::AddApplicationServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "E:\\Proyectos\\myprojects\\myTaskManagerBack\\src\\Application\\Application\\Services\\AuthService.cs": {
+      "Application.Services.AuthService": {
+        "System.Void Application.Services.AuthService::.ctor(Domain.Repositories.IUserRepository)": {
+          "Lines": {
+            "10": 3,
+            "11": 3,
+            "12": 3,
+            "13": 3
+          },
+          "Branches": []
+        }
+      },
+      "Application.Services.AuthService/<LoginAsync>d__2": {
+        "System.Void Application.Services.AuthService/<LoginAsync>d__2::MoveNext()": {
+          "Lines": {
+            "16": 3,
+            "17": 3,
+            "18": 3,
+            "19": 1,
+            "20": 1,
+            "23": 2,
+            "24": 1,
+            "25": 1,
+            "28": 1,
+            "30": 1,
+            "31": 3
+          },
+          "Branches": [
+            {
+              "Line": 18,
+              "Offset": 164,
+              "EndOffset": 166,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 18,
+              "Offset": 164,
+              "EndOffset": 171,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 23,
+              "Offset": 202,
+              "EndOffset": 204,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 23,
+              "Offset": 202,
+              "EndOffset": 209,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "E:\\Proyectos\\myprojects\\myTaskManagerBack\\src\\Application\\Application\\Services\\UserService.cs": {
+      "Application.Services.UserService": {
+        "System.Void Application.Services.UserService::.ctor(Domain.Repositories.IUserRepository)": {
+          "Lines": {
+            "11": 5,
+            "12": 5,
+            "13": 5,
+            "15": 5
+          },
+          "Branches": []
+        }
+      },
+      "Application.Services.UserService/<Create>d__5": {
+        "System.Void Application.Services.UserService/<Create>d__5::MoveNext()": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "44": 0,
+            "45": 0
+          },
+          "Branches": [
+            {
+              "Line": 35,
+              "Offset": 180,
+              "EndOffset": 182,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 180,
+              "EndOffset": 194,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Application.Services.UserService/<Delete>d__7": {
+        "System.Void Application.Services.UserService/<Delete>d__7::MoveNext()": {
+          "Lines": {
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "60": 0,
+            "61": 0
+          },
+          "Branches": [
+            {
+              "Line": 55,
+              "Offset": 175,
+              "EndOffset": 177,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 55,
+              "Offset": 175,
+              "EndOffset": 189,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Application.Services.UserService/<GetAll>d__2": {
+        "System.Void Application.Services.UserService/<GetAll>d__2::MoveNext()": {
+          "Lines": {
+            "18": 1,
+            "19": 1,
+            "20": 1
+          },
+          "Branches": []
+        }
+      },
+      "Application.Services.UserService/<GetByEmail>d__4": {
+        "System.Void Application.Services.UserService/<GetByEmail>d__4::MoveNext()": {
+          "Lines": {
+            "28": 2,
+            "29": 2,
+            "30": 2
+          },
+          "Branches": []
+        }
+      },
+      "Application.Services.UserService/<GetById>d__3": {
+        "System.Void Application.Services.UserService/<GetById>d__3::MoveNext()": {
+          "Lines": {
+            "23": 2,
+            "24": 2,
+            "25": 2
+          },
+          "Branches": []
+        }
+      },
+      "Application.Services.UserService/<Update>d__6": {
+        "System.Void Application.Services.UserService/<Update>d__6::MoveNext()": {
+          "Lines": {
+            "48": 0,
+            "49": 0,
+            "50": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
   "Domain.dll": {}
 }
