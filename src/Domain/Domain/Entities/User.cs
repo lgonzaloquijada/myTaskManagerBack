@@ -1,6 +1,9 @@
+using System.Diagnostics.CodeAnalysis;
 using Domain.Models;
 
 namespace Domain.Entities;
+
+[ExcludeFromCodeCoverage]
 public class User : Entity
 {
     public string Name { get; set; }
