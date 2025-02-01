@@ -21,7 +21,7 @@ public class UserController : ControllerBase
     public async Task<IActionResult> GetAll()
     {
         var users = await _userService.GetAll();
-        var usersDTO = users.Select(user => UserDTO.ToUserDTO(user));
+        var usersDTO = users.Select(UserDTO.FromEntity);
         return Ok(usersDTO);
     }
 
@@ -34,7 +34,7 @@ public class UserController : ControllerBase
             return NotFound();
         }
 
-        var userDTO = UserDTO.ToUserDTO(user);
+        var userDTO = UserDTO.FromEntity(user);
         return Ok(userDTO);
     }
 
@@ -46,25 +46,25 @@ public class UserController : ControllerBase
         {
             return NotFound();
         }
-        var userDTO = UserDTO.ToUserDTO(user);
+        var userDTO = UserDTO.FromEntity(user);
         return Ok(userDTO);
     }
 
     [HttpPost]
     public async Task<IActionResult> Create(UserDTO userDTO)
     {
-        var userModel = userDTO.ToUserModel();
+        var userModel = userDTO.ToEntity();
         var createdUser = await _userService.Create(userModel);
-        var createUserDTO = UserDTO.ToUserDTO(createdUser);
+        var createUserDTO = UserDTO.FromEntity(createdUser);
         return CreatedAtAction(nameof(GetById), new { id = createdUser.Id }, createUserDTO);
     }
 
     [HttpPut]
     public async Task<IActionResult> Update(UserDTO userDTO)
     {
-        var user = userDTO.ToUserModel();
+        var user = userDTO.ToEntity();
         var updatedUser = await _userService.Update(user);
-        var updatedUserDTO = UserDTO.ToUserDTO(updatedUser);
+        var updatedUserDTO = UserDTO.FromEntity(updatedUser);
         return Ok(updatedUserDTO);
     }
 
@@ -72,7 +72,7 @@ public class UserController : ControllerBase
     public async Task<IActionResult> Delete(int id)
     {
         var deletedUser = await _userService.Delete(id);
-        var deletedUserDTO = UserDTO.ToUserDTO(deletedUser);
+        var deletedUserDTO = UserDTO.FromEntity(deletedUser);
         return Ok(deletedUserDTO);
     }
 }

@@ -40,23 +40,23 @@ public class UserDTO
         this.is_active = is_active;
     }
 
-    public User ToUserModel()
+    public User ToEntity()
     {
         return new User()
         {
-            Id = this.id,
-            Name = this.name,
-            Email = this.email,
-            Password = this.password,
-            Role = this.role,
-            CreatedAt = this.created_at,
-            UpdatedAt = this.updated_at,
-            Token = this.token,
-            IsActive = this.is_active
+            Id = id,
+            Name = name,
+            Email = email,
+            Password = password,
+            Role = role,
+            CreatedAt = created_at,
+            UpdatedAt = updated_at,
+            Token = token,
+            IsActive = is_active
         };
     }
 
-    public static UserDTO ToUserDTO(User user)
+    public static UserDTO FromEntity(User user)
     {
         return new UserDTO()
         {

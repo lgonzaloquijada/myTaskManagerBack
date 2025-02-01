@@ -62,7 +62,7 @@ public class AuthController : ControllerBase
             signingCredentials: creds
         );
 
-        var userDTO = UserDTO.ToUserDTO(user);
+        var userDTO = UserDTO.FromEntity(user);
         userDTO.token = new JwtSecurityTokenHandler().WriteToken(token);
         return Ok(userDTO);
     }
