@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C1C2016C-E82F-4CE8-AD33-9D996F1D6456}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "src\Presentation", "{C1C2016C-E82F-4CE8-AD33-9D996F1D6456}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "Presentation\API\API.csproj", "{AF738936-D81B-493F-88DE-7A946A8CAF9C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "src\Presentation\API\API.csproj", "{AF738936-D81B-493F-88DE-7A946A8CAF9C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{CBCDC767-E954-4B33-B343-3C3DF6102E85}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "src\Application", "{CBCDC767-E954-4B33-B343-3C3DF6102E85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application\Application.csproj", "{DD38997F-62F9-490A-A7E9-952E9415E3BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Application\Application\Application.csproj", "{DD38997F-62F9-490A-A7E9-952E9415E3BF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{D5726D69-3AF6-4FE6-9F06-4B88D8D25927}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "src\Domain", "{D5726D69-3AF6-4FE6-9F06-4B88D8D25927}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain\Domain.csproj", "{F93AA8FA-7961-4658-A031-4036AB818D4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain\Domain.csproj", "{F93AA8FA-7961-4658-A031-4036AB818D4B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{543890E0-E127-49DE-A411-A31387FB9696}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "src\Infrastructure", "{543890E0-E127-49DE-A411-A31387FB9696}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Infrastructure\Persistence\Persistence.csproj", "{B939A2A5-3552-44FD-A706-ED0FABC94EDA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "src\Infrastructure\Persistence\Persistence.csproj", "{B939A2A5-3552-44FD-A706-ED0FABC94EDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
