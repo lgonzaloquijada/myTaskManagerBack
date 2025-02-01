@@ -47,4 +47,23 @@ public class AuthServiceTest
         // Assert
         Assert.Null(result);
     }
+
+    [Fact]
+    public async Task LoginAsync_WhenCredentialsAreCorrect_ReturnsUserWithoutPassword()
+    {
+        // Arrange
+        _userRepositoryMock.Setup(x => x.GetByEmail(It.IsAny<string>()))
+            .ReturnsAsync(new User
+            {
+                Email = "test@mail.com",
+                Password = BCrypt.Net.BCrypt.HashPassword("password")
+            });
+
+        // Act
+        var result = await _authService.LoginAsync("test@mail.com", "password");
+
+        // Assert
+        Assert.NotNull(result);
+        Assert.Empty(result!.Password);
+    }
 }
