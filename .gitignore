@@ -1,8 +1,8 @@
 .vs
 src/Presentation/API/obj
 src/Presentation/API/bin
-src/Application/Application/obj
-src/Application/Application/bin
+src/Application/obj
+src/Application/bin
 src/Domain/Domain/obj
 src/Domain/Domain/bin
 src/Infrastructure/Persistence/obj
