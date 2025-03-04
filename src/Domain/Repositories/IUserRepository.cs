@@ -2,12 +2,7 @@ using Domain.Entities;
 
 namespace Domain.Repositories;
 
-public interface IUserRepository
+public interface IUserRepository : IRepository<User>
 {
-    Task<List<User>> GetAll();
-    Task<User?> GetById(int id);
     Task<User?> GetByEmail(string email);
-    Task<User> Create(User user);
-    Task<User> Update(User user);
-    Task<User> Delete(User user);
 }
