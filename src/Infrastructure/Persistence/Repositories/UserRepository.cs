@@ -5,7 +5,7 @@ using Persistence.Context;
 
 namespace Persistence.Repositories
 {
-    public class UserRepository : Repository<User>, IUserRepository
+    public class UserRepository : BaseRepository<User>, IUserRepository
     {
         private readonly MainContext _context;
 

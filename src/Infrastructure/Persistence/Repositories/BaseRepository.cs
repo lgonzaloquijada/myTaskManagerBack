@@ -3,11 +3,11 @@ using Persistence.Context;
 
 namespace Domain.Repositories;
 
-public class Repository<T> : IRepository<T> where T : class
+public class BaseRepository<T> : IBaseRepository<T> where T : class
 {
     private readonly MainContext _context;
 
-    public Repository(MainContext context)
+    public BaseRepository(MainContext context)
     {
         _context = context;
     }
