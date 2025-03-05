@@ -11,5 +11,6 @@ public static class ApplicationRegistrationExtensions
     {
         services.AddTransient<IUserService, UserService>();
         services.AddTransient<IAuthService, AuthService>();
+        services.AddTransient<IProjectService, ProjectService>();
     }
 }

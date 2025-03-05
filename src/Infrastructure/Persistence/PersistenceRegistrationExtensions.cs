@@ -9,6 +9,7 @@ public static class PersistenceRegistrationExtensions
     public static IServiceCollection AddPersistenceServices(this IServiceCollection services)
     {
         services.AddTransient<IUserRepository, UserRepository>();
+        services.AddTransient<IProjectRepository, ProjectRepository>();
         return services;
     }
 }
