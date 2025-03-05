@@ -2,7 +2,7 @@ using Domain.Entities;
 using Domain.Repositories;
 using Persistence.Context;
 
-namespace Infrastructure.Persistence.Repositories;
+namespace Persistence.Repositories;
 
 public class ProjectRepository : BaseRepository<Project>, IProjectRepository
 {

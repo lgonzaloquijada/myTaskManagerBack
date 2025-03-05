@@ -1,7 +1,8 @@
+using Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Context;
 
-namespace Domain.Repositories;
+namespace Persistence.Repositories;
 
 public class BaseRepository<T> : IBaseRepository<T> where T : class
 {
