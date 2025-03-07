@@ -64,4 +64,19 @@ public class ProjectServiceTest
         Assert.NotNull(result);
         Assert.Equal(projects.Count, result.Count());
     }
+
+    [Fact]
+    public async Task CreateProjectAsync_ShouldCreateProject()
+    {
+        // Arrange
+        var project = new Project { Id = 1, Name = "Project 1" };
+
+        // Act
+        var result = await _projectService.CreateProjectAsync(project);
+
+        // Assert
+        _projectRepositoryMock.Verify(x => x.Create(project), Times.Once);
+        Assert.Equal(project.Id, result.Id);
+        Assert.Equal(project.Name, result.Name);
+    }
 }

@@ -68,10 +68,10 @@
       "Application.Services.ProjectService": {
         "System.Void Application.Services.ProjectService::.ctor(Domain.Repositories.IProjectRepository)": {
           "Lines": {
-            "9": 2,
-            "10": 2,
-            "11": 2,
-            "12": 2
+            "9": 4,
+            "10": 4,
+            "11": 4,
+            "12": 4
           },
           "Branches": []
         }
@@ -79,10 +79,10 @@
       "Application.Services.ProjectService/<CreateProjectAsync>d__4": {
         "System.Void Application.Services.ProjectService/<CreateProjectAsync>d__4::MoveNext()": {
           "Lines": {
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0
+            "27": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1
           },
           "Branches": []
         }
@@ -132,10 +132,10 @@
       "Application.Services.ProjectService/<GetProjectsAsync>d__3": {
         "System.Void Application.Services.ProjectService/<GetProjectsAsync>d__3::MoveNext()": {
           "Lines": {
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1
           },
           "Branches": []
         }
