@@ -68,10 +68,10 @@
       "Application.Services.ProjectService": {
         "System.Void Application.Services.ProjectService::.ctor(Domain.Repositories.IProjectRepository)": {
           "Lines": {
-            "9": 5,
-            "10": 5,
-            "11": 5,
-            "12": 5
+            "9": 7,
+            "10": 7,
+            "11": 7,
+            "12": 7
           },
           "Branches": []
         }
@@ -90,13 +90,13 @@
       "Application.Services.ProjectService/<DeleteProjectAsync>d__6": {
         "System.Void Application.Services.ProjectService/<DeleteProjectAsync>d__6::MoveNext()": {
           "Lines": {
-            "39": 0,
-            "40": 0,
-            "41": 0,
-            "42": 0,
-            "43": 0,
-            "46": 0,
-            "47": 0
+            "39": 2,
+            "40": 2,
+            "41": 2,
+            "42": 1,
+            "43": 1,
+            "46": 1,
+            "47": 1
           },
           "Branches": [
             {
@@ -105,7 +105,7 @@
               "EndOffset": 175,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 41,
@@ -113,7 +113,7 @@
               "EndOffset": 239,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }

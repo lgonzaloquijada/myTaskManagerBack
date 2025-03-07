@@ -94,4 +94,30 @@ public class ProjectServiceTest
         Assert.Equal(project.Id, result.Id);
         Assert.Equal(project.Name, result.Name);
     }
+
+    [Fact]
+    public async Task DeleteProjectAsync_ShouldDeleteProject_WhenProjectExists()
+    {
+        // Arrange
+        var projectId = 1;
+        var project = new Project { Id = projectId, Name = "Project 1" };
+        _projectRepositoryMock.Setup(x => x.GetById(projectId)).ReturnsAsync(project);
+
+        // Act
+        await _projectService.DeleteProjectAsync(projectId);
+
+        // Assert
+        _projectRepositoryMock.Verify(x => x.Delete(project), Times.Once);
+    }
+
+    [Fact]
+    public async Task DeleteProjectAsync_ShouldThrowException_WhenProjectDoesNotExist()
+    {
+        // Arrange
+        var projectId = 1;
+        _projectRepositoryMock.Setup(x => x.GetById(projectId)).ReturnsAsync((Project?)null);
+
+        // Act & Assert
+        await Assert.ThrowsAsync<Exception>(() => _projectService.DeleteProjectAsync(projectId));
+    }
 }
