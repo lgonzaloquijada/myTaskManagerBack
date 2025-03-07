@@ -79,4 +79,19 @@ public class ProjectServiceTest
         Assert.Equal(project.Id, result.Id);
         Assert.Equal(project.Name, result.Name);
     }
+
+    [Fact]
+    public async Task UpdateProjectAsync_ShouldUpdateProject()
+    {
+        // Arrange
+        var project = new Project { Id = 1, Name = "Project 1" };
+
+        // Act
+        var result = await _projectService.UpdateProjectAsync(project);
+
+        // Assert
+        _projectRepositoryMock.Verify(x => x.Update(project), Times.Once);
+        Assert.Equal(project.Id, result.Id);
+        Assert.Equal(project.Name, result.Name);
+    }
 }
