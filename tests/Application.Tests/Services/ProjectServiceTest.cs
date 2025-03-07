@@ -45,4 +45,23 @@ public class ProjectServiceTest
         // Assert
         Assert.Null(result);
     }
+
+    [Fact]
+    public async Task GetProjectAsync_ShouldReturnAllProjects()
+    {
+        // Arrange
+        var projects = new List<Project>
+        {
+            new() { Id = 1, Name = "Project 1" },
+            new() { Id = 2, Name = "Project 2" }
+        };
+        _projectRepositoryMock.Setup(x => x.GetAll()).ReturnsAsync(projects);
+
+        // Act
+        var result = await _projectService.GetProjectsAsync();
+
+        // Assert
+        Assert.NotNull(result);
+        Assert.Equal(projects.Count, result.Count());
+    }
 }
