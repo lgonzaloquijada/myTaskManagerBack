@@ -1,6 +1,6 @@
 {
   "Application.dll": {
-    "E:\\Proyectos\\myprojects\\myTaskManagerBack\\src\\Application\\Application\\Services\\AuthService.cs": {
+    "E:\\Proyectos\\myprojects\\myTaskManagerBack\\src\\Application\\Services\\AuthService.cs": {
       "Application.Services.AuthService": {
         "System.Void Application.Services.AuthService::.ctor(Domain.Repositories.IUserRepository)": {
           "Lines": {
@@ -64,7 +64,95 @@
         }
       }
     },
-    "E:\\Proyectos\\myprojects\\myTaskManagerBack\\src\\Application\\Application\\Services\\UserService.cs": {
+    "E:\\Proyectos\\myprojects\\myTaskManagerBack\\src\\Application\\Services\\ProjectService.cs": {
+      "Application.Services.ProjectService": {
+        "System.Void Application.Services.ProjectService::.ctor(Domain.Repositories.IProjectRepository)": {
+          "Lines": {
+            "9": 2,
+            "10": 2,
+            "11": 2,
+            "12": 2
+          },
+          "Branches": []
+        }
+      },
+      "Application.Services.ProjectService/<CreateProjectAsync>d__4": {
+        "System.Void Application.Services.ProjectService/<CreateProjectAsync>d__4::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        }
+      },
+      "Application.Services.ProjectService/<DeleteProjectAsync>d__6": {
+        "System.Void Application.Services.ProjectService/<DeleteProjectAsync>d__6::MoveNext()": {
+          "Lines": {
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "46": 0,
+            "47": 0
+          },
+          "Branches": [
+            {
+              "Line": 41,
+              "Offset": 173,
+              "EndOffset": 175,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 173,
+              "EndOffset": 239,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Application.Services.ProjectService/<GetProjectAsync>d__2": {
+        "System.Void Application.Services.ProjectService/<GetProjectAsync>d__2::MoveNext()": {
+          "Lines": {
+            "15": 2,
+            "16": 2,
+            "17": 2,
+            "18": 2
+          },
+          "Branches": []
+        }
+      },
+      "Application.Services.ProjectService/<GetProjectsAsync>d__3": {
+        "System.Void Application.Services.ProjectService/<GetProjectsAsync>d__3::MoveNext()": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      },
+      "Application.Services.ProjectService/<UpdateProjectAsync>d__5": {
+        "System.Void Application.Services.ProjectService/<UpdateProjectAsync>d__5::MoveNext()": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "E:\\Proyectos\\myprojects\\myTaskManagerBack\\src\\Application\\Services\\UserService.cs": {
       "Application.Services.UserService": {
         "System.Void Application.Services.UserService::.ctor(Domain.Repositories.IUserRepository)": {
           "Lines": {
