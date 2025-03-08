@@ -7,6 +7,7 @@ namespace Persistence.Context;
 public class MainContext : DbContext
 {
     public DbSet<User> Users { get; set; }
+    public DbSet<Project> Projects { get; set; }
 
     public MainContext(DbContextOptions<MainContext> options) : base(options) { }
 
@@ -51,14 +52,14 @@ public class MainContext : DbContext
         foreach (var entry in entries)
         {
             ITrackableEntity entity = (ITrackableEntity)entry.Entity;
-            
+
             if (entry.State == EntityState.Added)
             {
                 entity.CreatedAt = DateTime.Now;
                 entity.UpdatedAt = DateTime.Now;
                 entity.CreatedBy = 1;
                 entity.UpdatedBy = 1;
-            } 
+            }
             else if (entry.State == EntityState.Modified)
             {
                 entity.UpdatedAt = DateTime.Now;

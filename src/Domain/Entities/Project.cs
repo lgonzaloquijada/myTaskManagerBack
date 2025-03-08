@@ -14,7 +14,6 @@ public class Project : Entity
     public int Priority { get; set; }
     public int ManagerId { get; set; }
     public User Manager { get; set; }
-    public ICollection<Task> Tasks { get; set; }
 
     public Project()
     {
@@ -26,7 +25,6 @@ public class Project : Entity
         Priority = 0;
         ManagerId = 0;
         Manager = new User();
-        Tasks = new List<Task>();
     }
 
     public Project(string name, string description, DateTime startDate, DateTime endDate, int status, int priority, int managerId, User manager, ICollection<Task> tasks)
@@ -39,6 +37,5 @@ public class Project : Entity
         Priority = priority;
         ManagerId = managerId;
         Manager = manager;
-        Tasks = tasks;
     }
 }
